@@ -24,6 +24,20 @@ git clone https://github.com/nickypro/taker.git
 
 cd /root/taker
 
+# Create examples directory if it doesn't exist
+mkdir -p examples
+
+# Clone investigating-ablation repository into examples directory
+cd examples
+git clone https://github.com/nickypro/investigating-ablation.git
+
+# Switch to comparison branch in investigating-ablation repo
+cd investigating-ablation
+git checkout comparison
+
+# Return to taker directory
+cd /root/taker
+
 # Install dependencies with Poetry
 poetry install
 
